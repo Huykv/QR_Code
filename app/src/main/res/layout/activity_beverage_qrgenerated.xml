@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightBlue"
+    android:orientation="vertical"
+    android:paddingHorizontal="10dp"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/buttonBackGenerate"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:backgroundTint="#ffffff"
+        android:text=" Back"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/taoRa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/taoRa" />
+
+    <TextView
+        android:id="@+id/taoRa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nước giải khát"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginVertical="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/taoRa"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                app:cardCornerRadius="15dp"
+                android:visibility="gone"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/imageViewGenerate"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/buttonSelectImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Chọn ảnh"
+                android:layout_gravity="center"
+                android:textColor="#000000"/>
+
+            <EditText
+                android:id="@+id/beverage_tenSP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/beverage_thanhPhan"
+                android:layout_marginTop="15dp"
+                android:hint="Nhập tên"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/beverage_giaThanh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/beverage_xuatsuSP"
+                android:layout_marginTop="15dp"
+                android:hint="Nhập giá"
+                android:inputType="number"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/beverage_huongVi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/beverage_giaThanh"
+                android:layout_marginTop="15dp"
+                android:hint="Nhập hương vị"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/beverage_thuongHieu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/beverage_maSP_maSP"
+                android:layout_marginTop="15dp"
+                android:hint="Nhập thương hiệu"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/beverage_xuatsuSP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/beverage_tenSP"
+                android:layout_marginTop="15dp"
+                android:hint="Nhập xuất xứ"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/beverage_moTaSP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/beverage_thuongHieu_thuongHieu"
+                android:layout_marginTop="15dp"
+                android:hint="Nhập mô tả"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/beverage_thanhPhan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/beverage_moTaSP"
+                android:layout_marginTop="15dp"
+                android:hint="Nhập thành phần"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/beverage_dungTich"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/beverage_loaiSP"
+                android:layout_marginTop="15dp"
+                android:hint="Nhập dung tích"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/beverage_dongGoi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/beverage_dungTich"
+                android:layout_marginTop="15dp"
+                android:hint="Nhập cách đóng gói"
+                android:minHeight="48dp" />
+
+            <Button
+                android:id="@+id/buttonGenerate"
+                android:layout_width="209dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="Generate"
+                android:textColor="@color/black" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewQR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:visibility="gone"
+                app:cardCornerRadius="15dp">
+
+                <ImageView
+                    android:id="@+id/qr_code"
+                    android:layout_width="400dp"
+                    android:layout_height="350dp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitCenter" />
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/buttonIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:text="In"
+                android:textColor="#000000"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

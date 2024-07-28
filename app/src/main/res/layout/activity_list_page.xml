@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="25dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:layout_marginVertical="10dp"
+        android:text="Danh sách loại sản phẩm"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints">
+
+        <ListView
+            android:id="@+id/listViewTypeProduct"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/line_type_product" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+
+        android:gravity="center"
+
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/tao_ma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/qr_xam"
+            android:onClick="onQRClicked"
+            android:text="Tạo mã"
+            android:textAlignment="center"
+            android:textColor="@color/grey"
+            android:textSize="15dp"
+            tools:ignore="MissingConstraints,TextSizeCheck"></TextView>
+
+        <TextView
+            android:id="@+id/list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/list_xanh"
+            android:onClick="onQRClicked"
+            android:text="Danh sách"
+            android:textAlignment="center"
+            android:textColor="@color/lightBlue"
+            tools:ignore="MissingConstraints"></TextView>
+
+        <TextView
+            android:id="@+id/thongke"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/thongke_xam"
+            android:onClick="onQRClicked"
+            android:text="Thống kê"
+            android:textAlignment="center"
+            android:textColor="@color/grey"
+            tools:ignore="MissingConstraints"></TextView>
+
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/logout_xam"
+            android:onClick="onQRClicked"
+            android:text="Đăng xuất"
+            android:textAlignment="center"
+            android:textColor="@color/grey"
+            android:textSize="15dp"
+            tools:ignore="MissingConstraints,TextSizeCheck"></TextView>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout >

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="10dp">
+
+    <Button
+        android:id="@+id/buttonCancel"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/lightBlue"
+        android:text="Huỷ"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+    
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/lightBlue"
+        android:text="Lưu"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ScrollView
+        android:id="@+id/scrollView5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                app:cardCornerRadius="15dp"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/imageViewEdit"
+                    android:layout_width="240dp"
+                    android:layout_height="240dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/lightBlue"
+                    android:padding="10dp"
+                    tools:srcCompat="@android:drawable/ic_menu_gallery" />
+
+            </androidx.cardview.widget.CardView>
+
+            <EditText
+                android:id="@+id/editTextEditName"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:hint="Name Product"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextEditPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:hint="Price"
+                android:inputType="number"
+                android:textSize="25dp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/textViewEditFlavor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Hương vị:"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/editTextEditFlavor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Hương vị" />
+
+            <TextView
+                android:id="@+id/textViewEditBrand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Thương hiệu:"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/editTextEditBrand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Thương hiệu"/>
+
+            <TextView
+                android:id="@+id/textViewEditOrigin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Xuất xứ:"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/editTextEditOrigin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Xuất xứ"/>
+
+            <TextView
+                android:id="@+id/textViewEditIngredient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thành phần:"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/editTextEditIngredient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Thành phần"/>
+
+            <TextView
+                android:id="@+id/textViewEditDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Mô tả:"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/editTextEditDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Mô tả"/>
+
+            <TextView
+                android:id="@+id/textViewEditPack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Đóng gói:"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/editTextEditPack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Đóng gói"/>
+
+            <TextView
+                android:id="@+id/textViewEditUnit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Đơn vị:"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/editTextEditUnit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Đơn vị"/>
+
+            <TextView
+                android:id="@+id/textViewEditCapacity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Dung tích:"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/editTextEditCapacity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Dung tích"/>
+
+            <TextView
+                android:id="@+id/textViewEditWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Khối lượng:"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/editTextEditWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Khối lượng"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
